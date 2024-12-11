@@ -9,5 +9,12 @@ class Tudo extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'text'];
+    protected $fillable = ['categorey_id', 'name', 'text'];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+
 }
