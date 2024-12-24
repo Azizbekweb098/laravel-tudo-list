@@ -24,17 +24,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
-    return $request->user();
-});
+
 Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [LoginController::class, 'login']);
 
 
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::resource('category', CategoryController::class);
-
     Route::resource('tudo', TudoController::class);
     Route::get('category_search', [SearchController::class, 'category']);
+    Route::resource('contact', ContactController::class); // To'g'irlandi
 });
-Route::resouce('contact', ContactController::class);
+
