@@ -9,7 +9,7 @@ class Tudo extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['categorey_id', 'name', 'text'];
+    protected $fillable = ['categorey_id', 'name', 'text', 'deadline'];
 
     public function category()
     {

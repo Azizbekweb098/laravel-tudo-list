@@ -21,6 +21,7 @@ $request->validate([
     'email' => $request->email,
     'password' => Hash::make($request->password),
    ]);
+   $user->profile()->create();
 
    $token = $user->createToken('Vel Token')->plainTextToken;
 

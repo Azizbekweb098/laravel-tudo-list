@@ -33,7 +33,7 @@ class ExapMail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'New Contact Form Submission',
+            subject: 'Contact',
         );
     }
 

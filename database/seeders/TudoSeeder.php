@@ -15,17 +15,6 @@ class TudoSeeder extends Seeder
      */
     public function run()
     {
-        Tudo::create([
-            'name' => 'salom',
-            'text' => 'salomsalomsalomsalomsalomsalomsalom',
-            'created_at' => null,
-            'updated_at' => null,
-        ]);
-        Tudo::create([
-            'name' => 'Azizbek',
-            'text' => 'salomsalomsalomsalomsalomsalomsalom',
-            'created_at' => null,
-            'updated_at' => null,
-        ]);
+      Tudo::factory(40)->create();
     }
 }

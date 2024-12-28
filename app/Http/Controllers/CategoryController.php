@@ -41,7 +41,8 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        $requestData = Category::find($id);
+        return response()->json($requestData);
     }
 
     /**
@@ -53,7 +54,10 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $requestDatas = Category::findOrFail($id);  // findOrFail yordamida xatolikni yaxshiroq boshqarish
+        $requestDatas->update($request->all());
+        
+        return response()->json($requestDatas, 200);
     }
 
     /**

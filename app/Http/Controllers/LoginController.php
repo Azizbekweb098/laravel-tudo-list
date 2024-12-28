@@ -21,7 +21,7 @@ class LoginController extends Controller
         $token = $user->createToken('Vel token')->plainTextToken;
 
         return response()->json([
-            'user' => $user,
+
             'token' => $token,
         ]);
 
